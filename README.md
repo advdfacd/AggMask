@@ -52,7 +52,8 @@ AggMask_R101_FPN -mask-grid | aggmask_r101_fpn_halve_maskgrid.py
 AggMask*_R101_FPN +cls-grid  | aggmask_star_r101_fpn_increasing_clsgrid.py
 AggMask*_R101_FPN -mask-grid | aggmask_star_r101_fpn_halve_maskgrid.py
 > config files under ./configs/aggmask/
-> AggMask is with SOLO, and AggMask* is with SOLOv2
+
+> ##AggMask is with SOLO, and AggMask* is with SOLOv2##
 
 ## Training (with multiple GPUs)
     python -m torch.distributed.launch --nproc_per_node=${GPU_NUM} --master_port=$((RANDOM + 10000)) tools/train.py ${CONFIG_FILE} --launcher pytorch
